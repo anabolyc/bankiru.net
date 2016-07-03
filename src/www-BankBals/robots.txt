@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /Account
+Disallow: /Chat
+Disallow: /Service
+Disallow: /Bank/GetExcel
+Disallow: /View/GetExcel
+Disallow: /Content/BankBalsTool/BankBalsTool-Web.xlsm

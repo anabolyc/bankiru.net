@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>--server 192.168.1.10 --username tempservice --password 123456 --force-load --full-load</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <StartArguments>--server 10.2.200.54 --upload-file c:\_temp\bals\102-20131001.rar</StartArguments>
+  </PropertyGroup>
+</Project>

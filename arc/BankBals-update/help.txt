@@ -1,0 +1,15 @@
+﻿Usage:
+
+--help		: print this help
+--auto		: upload last report automaticly
+--full-load	: make full load (default is only latest file)
+--force-load	: force load all reports (default is only not loaded yet)
+--upload-file	: upload specified file
+
+
+SQL server options
+--server	: specify sql server host (default is (local))
+--username user	: username for sql-server (default is trusted connection)
+--password pass : password for sql-server
+--database	: set database (default [BankBals-dev])
+

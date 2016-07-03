@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BankBals2" Class="BankBalsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=BankBals2;Integrated Security=True" SettingsObjectName="www.BankBals.Properties.Settings" SettingsPropertyName="BankBals2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.A_VIEWS" Member="A_VIEWs">
+    <Type Name="A_VIEW">
+      <Column Name="ViewID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ticker" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ViewNameRus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ViewNameEng" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Form" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DescFilterCol" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="DescFilterCaption" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="DescFilterMask" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="DescFilterRow" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="IsHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OrderNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsAdvanced" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="A_VIEW_A_VIEWS_SET" Member="A_VIEWS_SETs" ThisKey="ViewID" OtherKey="ViewID" Type="A_VIEWS_SET" />
+      <Association Name="A_VIEW_A_VIEWITEM" Member="A_VIEWITEMs" ThisKey="ViewID" OtherKey="ViewID" Type="A_VIEWITEM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_PARAMS" Member="A_PARAMs">
+    <Type Name="A_PARAM">
+      <Column Name="ParID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ticker" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NameRus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="WebRus" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="WebEng" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="F101" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F102" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F123" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F134" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F135" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsHasRank" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsRatio" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ChgParID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsMain" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsChange" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="A_PARAM_A_VIEWS_SET" Member="A_VIEWS_SETs" ThisKey="ParID" OtherKey="ParID1" Type="A_VIEWS_SET" />
+      <Association Name="A_PARAM_A_VIEWS_SET1" Member="A_VIEWS_SETs1" ThisKey="ParID" OtherKey="ParID2" Type="A_VIEWS_SET" />
+      <Association Name="A_PARAM_A_VIEWITEM" Member="A_VIEWITEMs" ThisKey="ParID" OtherKey="ParID" Type="A_VIEWITEM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_VIEWS_SET" Member="A_VIEWS_SETs">
+    <Type Name="A_VIEWS_SET">
+      <Column Name="SetID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ViewID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ParID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="A_PARAM_A_VIEWS_SET" Member="A_PARAM" ThisKey="ParID1" OtherKey="ParID" Type="A_PARAM" IsForeignKey="true" />
+      <Association Name="A_PARAM_A_VIEWS_SET1" Member="A_PARAM1" ThisKey="ParID2" OtherKey="ParID" Type="A_PARAM" IsForeignKey="true" />
+      <Association Name="A_VIEW_A_VIEWS_SET" Member="A_VIEW" ThisKey="ViewID" OtherKey="ViewID" Type="A_VIEW" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_AGGITEMS" Member="A_AGGITEMs">
+    <Type Name="A_AGGITEM">
+      <Column Name="Form" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AggItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ticker" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="AggItemTypeID" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="NameRus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDivideByAcc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TickerChecked" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTotalAssets" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="A_AGGITEMTYPE_A_AGGITEM" Member="A_AGGITEMTYPE" ThisKey="AggItemTypeID" OtherKey="AggItemTypeID" Type="A_AGGITEMTYPE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_AGGITEMTYPES" Member="A_AGGITEMTYPEs">
+    <Type Name="A_AGGITEMTYPE">
+      <Column Name="AggItemTypeID" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NameRus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRatio" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Association Name="A_AGGITEMTYPE_A_AGGITEM" Member="A_AGGITEMs" ThisKey="AggItemTypeID" OtherKey="AggItemTypeID" Type="A_AGGITEM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_BANKS" Member="A_BANKs">
+    <Type Name="A_BANK">
+      <Column Name="BankID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullNameRUS" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullNameENG" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BankTTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsHaveData" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IssuerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="A_BANK_W_AGG_COMP" Member="W_AGG_COMPs" ThisKey="BankID" OtherKey="BankID" Type="W_AGG_COMP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_AGGS" Member="A_AGGs">
+    <Type Name="A_AGG">
+      <Column Name="AggID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="FullNameRUS" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="FullNameENG" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IsHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_BANKS_ALL" Member="A_BANKS_ALLs">
+    <Type Name="A_BANKS_ALL">
+      <Column Name="BankID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="NameRus" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BankIDC1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BankIDC2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_VIEWITEMS_ALL" Member="A_VIEWITEMS_ALLs">
+    <Type Name="A_VIEWITEMS_ALL">
+      <Column Name="ViewID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ViewNameRus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ViewNameEng" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Form" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Expandable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ViewItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ticker" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="NameRus" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IsWithSub" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AggItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsRatio" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LevelDepth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_F101_TOCURITEMS" Member="A_F101_TOCURITEMs">
+    <Type Name="A_F101_TOCURITEM">
+      <Column Name="TOCurItemID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ticker" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRatio" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NameRus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="WebRus" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="WebEng" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_VIEWITEMS_COMPARE" Member="A_VIEWITEMS_COMPAREs">
+    <Type Name="A_VIEWITEMS_COMPARE">
+      <Column Name="ViewID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ViewNameRus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ViewNameEng" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ViewItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ticker" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Form" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsRatio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHeader" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AggItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsCollapsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameRus" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ColumnName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_2X2CHARTS_VIEW" Member="A_2X2CHARTS_VIEWs">
+    <Type Name="A_2X2CHARTS_VIEW">
+      <Column Name="ChartID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameRus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NameEng" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="X_FormID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="X_AggItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="X_MaxValue" Type="System.Decimal" DbType="Decimal(28,8) NOT NULL" CanBeNull="false" />
+      <Column Name="X_AggItemNameRus" Type="System.String" DbType="NVarChar(403)" CanBeNull="true" />
+      <Column Name="X_AggItemNameEng" Type="System.String" DbType="NVarChar(403)" CanBeNull="true" />
+      <Column Name="Y_FormID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Y_AggItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Y_MaxValue" Type="System.Decimal" DbType="Decimal(28,8) NOT NULL" CanBeNull="false" />
+      <Column Name="Y_AggItemNameRus" Type="System.String" DbType="NVarChar(403)" CanBeNull="true" />
+      <Column Name="Y_AggItemNameEng" Type="System.String" DbType="NVarChar(403)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.W_AGG_COMP" Member="W_AGG_COMPs">
+    <Type Name="W_AGG_COMP">
+      <Column Name="AggID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BankID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="F101IsWithTO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F134" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="A_BANK_W_AGG_COMP" Member="A_BANK" ThisKey="BankID" OtherKey="BankID" Type="A_BANK" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_VIEWS_BANKSPIC" Member="A_VIEWS_BANKSPICs">
+    <Type Name="A_VIEWS_BANKSPIC">
+      <Column Name="ViewID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ticker" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ViewNameRus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ViewNameEng" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Form" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OrderNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_DATE" Member="A_DATEs">
+    <Type Name="A_DATE">
+      <Column Name="DateID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IsQuartal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F101" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F102" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F123" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F134" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F135" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_VIEWITEMS" Member="A_VIEWITEMs">
+    <Type Name="A_VIEWITEM">
+      <Column Name="ViewID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ViewItemID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LevelDepth" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsWithSub" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AggItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HeaderNameRus" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="HeaderNameEng" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ParID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="A_PARAM_A_VIEWITEM" Member="A_PARAM" ThisKey="ParID" OtherKey="ParID" Type="A_PARAM" IsForeignKey="true" />
+      <Association Name="A_VIEW_A_VIEWITEM" Member="A_VIEW" ThisKey="ViewID" OtherKey="ViewID" Type="A_VIEW" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

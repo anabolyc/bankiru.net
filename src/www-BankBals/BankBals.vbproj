@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD0CF9BD-0A36-432D-9A16-013B0B1C2A88}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>www.BankBals</RootNamespace>
+    <AssemblyName>BankBals</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>BankBals.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>BankBals.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>project.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=1.0.0.505, Culture=neutral, PublicKeyToken=5120e14c03d0593c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Nlog\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CustomMembershipProvider.vb" />
+    <Compile Include="Classes\UploadFile.vb" />
+    <Compile Include="Classes\_Depricated.vb" />
+    <Compile Include="Classes\_ErrorHandling.vb" />
+    <Compile Include="Controllers\APIController.vb" />
+    <Compile Include="Controllers\AdminController.vb" />
+    <Compile Include="Controllers\BankController.vb" />
+    <Compile Include="Controllers\ComparisonController.vb" />
+    <Compile Include="Classes\Controller\CompressFilter.vb" />
+    <Compile Include="Controllers\ServiceController.vb" />
+    <Compile Include="Controllers\ViewController.vb" />
+    <Compile Include="Classes\Controller\FilterIPAttribute.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\_Common.vb" />
+    <Compile Include="Classes\CustomHtmlHelpers.vb" />
+    <Compile Include="Classes\TerminalFactory.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controllers\AccountController.vb" />
+    <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Controllers\Models\AccountModels.vb" />
+    <Compile Include="Columns.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Columns.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Columns.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Columns.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apple-touch-icon-120x120.png" />
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="Content\BankBalsTool\1.png" />
+    <Content Include="Content\BankBalsTool\2.png" />
+    <Content Include="Content\BankBalsTool\3.png" />
+    <Content Include="Content\BankBalsTool\xlsm.png" />
+    <Content Include="Content\Chart.css" />
+    <Content Include="Content\nonproduction-ie.css" />
+    <Content Include="robots.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Highcharts-3.0.4\js\adapters\mootools-adapter.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\adapters\mootools-adapter.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\adapters\prototype-adapter.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\adapters\prototype-adapter.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\highcharts-more.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\highcharts-more.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\highcharts.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\highcharts.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\annotations.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\annotations.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\canvas-tools.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\data.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\data.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\exporting.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\exporting.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\funnel.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\funnel.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\heatmap.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\heatmap.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\map.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\modules\map.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\themes\dark-blue.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\themes\dark-green.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\themes\gray.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\themes\grid.js" />
+    <Content Include="Scripts\Highcharts-3.0.4\js\themes\skies.js" />
+    <Content Include="Views\API\Index.vbhtml" />
+    <Content Include="Content\BankBalsTool\1.xcf" />
+    <Content Include="Content\BankBalsTool\2.xcf" />
+    <Content Include="Content\BankBalsTool\3.xcf" />
+    <Content Include="Content\BankBalsTool\BankBalsTool-Web.xlsm" />
+    <Content Include="Views\API\BankbalsTool.vbhtml" />
+    <Content Include="Views\Comparison\CompareBubbles.vbhtml" />
+    <Content Include="Views\Admin\TerminalResult.vbhtml" />
+    <Content Include="Views\Shared\__Layout.Compact.vbhtml" />
+    <Content Include="Views\Shared\__Layout.Full.vbhtml" />
+    <Content Include="Views\API\UploadFile.vbhtml" />
+    <Content Include="Views\Bank\Data.vbhtml" />
+    <Content Include="Views\View\Data.vbhtml" />
+    <Content Include="Views\Shared\_Chart.vbhtml" />
+    <Content Include="Views\View\Chart.vbhtml" />
+    <Content Include="Views\Bank\Chart.vbhtml" />
+    <Content Include="Views\View\List.vbhtml" />
+    <Content Include="Views\Shared\_Frame.vbhtml" />
+    <Content Include="Views\Shared\applet.view-search.js.vbhtml" />
+    <Content Include="Views\Shared\applet.bank-search.js.vbhtml" />
+    <Content Include="Views\Service\Help.vbhtml" />
+    <Content Include="Views\Shared\applet.lightbox.js.vbhtml" />
+    <Content Include="Views\Home\PageNotFound.vbhtml" />
+    <None Include="project.snk" />
+    <None Include="useragent.blacklist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="useragent.whitelist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
+    <None Include="_bin_deployableAssemblies\WebMatrix.WebData.xml" />
+    <None Include="_bin_deployableAssemblies\WebMatrix.WebData.dll" />
+    <None Include="_bin_deployableAssemblies\WebMatrix.Data.xml" />
+    <None Include="_bin_deployableAssemblies\WebMatrix.Data.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Razor.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Deployment.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Deployment.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Administration.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Razor.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Helpers.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.Helpers.dll" />
+    <None Include="_bin_deployableAssemblies\NuGet.Core.dll" />
+    <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.xml" />
+    <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Content\segoe-ui-light.eot" />
+    <Content Include="Content\segoe-ui-light.ttf" />
+    <None Include="Content\fonts\dejavu\dejavusansmono-webfont.eot" />
+    <None Include="Content\fonts\dejavu\DejaVuSansMono-webfont.svg" />
+    <None Include="Content\fonts\dejavu\dejavusansmono-webfont.ttf" />
+    <None Include="Content\fonts\dejavu\dejavusansmono-webfont.woff" />
+    <None Include="Content\fonts\dejavu\DejaVuSansMono.eot" />
+    <None Include="Content\fonts\dejavu\DejaVuSansMono.svg" />
+    <None Include="Content\fonts\dejavu\DejaVuSansMono.ttf" />
+    <None Include="Content\fonts\dejavu\DejaVuSansMono.woff" />
+    <None Include="Content\fonts\ubuntu\UbuntuMono-R-webfont.eot" />
+    <None Include="Content\fonts\ubuntu\UbuntuMono-R-webfont.svg" />
+    <None Include="Content\fonts\ubuntu\UbuntuMono-R-webfont.ttf" />
+    <None Include="Content\fonts\ubuntu\UbuntuMono-R-webfont.woff" />
+    <None Include="Content\img\Untitled.xcf" />
+    <Content Include="Content\bars\1.png" />
+    <Content Include="Content\bars\2.png" />
+    <Content Include="Content\bars\3.png" />
+    <Content Include="Content\bars\4.png" />
+    <Content Include="Content\bars\5.png" />
+    <Content Include="Content\Board.css" />
+    <Content Include="Content\help.png" />
+    <Content Include="Content\helpb.png" />
+    <Content Include="Content\homer-doh.png" />
+    <Content Include="Content\HTMLPage1.htm" />
+    <Content Include="Content\close2.png" />
+    <Content Include="Content\nonproduction.css" />
+    <Content Include="Content\sounds\incoming.mp3" />
+    <Content Include="Content\tabs\bank.png" />
+    <Content Include="Content\tabs\board.png" />
+    <Content Include="Content\tabs\chat.png" />
+    <Content Include="Content\tabs\compare.png" />
+    <Content Include="Content\tabs\home.png" />
+    <Content Include="Content\tabs\rank.png" />
+    <Content Include="Content\_export\_template\xl\printerSettings\printerSettings1.bin" />
+    <Content Include="Content\_export\_template\xl\worksheets\_rels\sheet1.xml.rels" />
+    <Content Include="Content\_export\_template\xl\_rels\workbook.xml.rels" />
+    <Content Include="Content\_export\_template\_rels\.rels" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Content\asc.gif" />
+    <Content Include="Content\b.png" />
+    <Content Include="Content\bg.gif" />
+    <Content Include="Content\chart.png" />
+    <Content Include="Content\close.png" />
+    <Content Include="Content\desc.gif" />
+    <Content Include="Content\excel.gif" />
+    <Content Include="Content\externallink.png" />
+    <Content Include="Content\ie.css" />
+    <Content Include="Content\ie6-7.css" />
+    <Content Include="Content\img\1.png" />
+    <Content Include="Content\img\1000.png" />
+    <Content Include="Content\img\1000s.png" />
+    <Content Include="Content\img\1326.png" />
+    <Content Include="Content\img\1326s.png" />
+    <Content Include="Content\img\1439.png" />
+    <Content Include="Content\img\1439s.png" />
+    <Content Include="Content\img\1481.png" />
+    <Content Include="Content\img\1481s.png" />
+    <Content Include="Content\img\1978.png" />
+    <Content Include="Content\img\1978s.png" />
+    <Content Include="Content\img\1s.png" />
+    <Content Include="Content\img\2209.png" />
+    <Content Include="Content\img\2209s.png" />
+    <Content Include="Content\img\2272.png" />
+    <Content Include="Content\img\2272s.png" />
+    <Content Include="Content\img\2275.png" />
+    <Content Include="Content\img\2275s.png" />
+    <Content Include="Content\img\2289.png" />
+    <Content Include="Content\img\2289s.png" />
+    <Content Include="Content\img\2557.png" />
+    <Content Include="Content\img\2557s.png" />
+    <Content Include="Content\img\2673.png" />
+    <Content Include="Content\img\2673s.png" />
+    <Content Include="Content\img\316.png" />
+    <Content Include="Content\img\316s.png" />
+    <Content Include="Content\img\323.png" />
+    <Content Include="Content\img\323s.png" />
+    <Content Include="Content\img\3251.png" />
+    <Content Include="Content\img\3251s.png" />
+    <Content Include="Content\img\3279.png" />
+    <Content Include="Content\img\3279s.png" />
+    <Content Include="Content\img\3292.png" />
+    <Content Include="Content\img\3292s.png" />
+    <Content Include="Content\img\3349.png" />
+    <Content Include="Content\img\3349s.png" />
+    <Content Include="Content\img\354.png" />
+    <Content Include="Content\img\354s.png" />
+    <Content Include="Content\img\f101.png" />
+    <Content Include="Content\img\f102.png" />
+    <Content Include="Content\img\f134.png" />
+    <Content Include="Content\img\f135.png" />
+    <Content Include="Content\loading_big.gif" />
+    <Content Include="Content\logo.png" />
+    <Content Include="Content\logon.png" />
+    <Content Include="Content\logout.png" />
+    <Content Include="Content\minus.gif" />
+    <Content Include="Content\plus.gif" />
+    <Content Include="Content\srch.png" />
+    <Content Include="Content\tablesorter.css" />
+    <Content Include="Content\loading.gif" />
+    <Content Include="Content\_export\_template\docProps\app.xml" />
+    <Content Include="Content\_export\_template\docProps\core.xml" />
+    <Content Include="Content\_export\_template\xl\connections.xml" />
+    <Content Include="Content\_export\_template\xl\queryTables\queryTable1.xml" />
+    <Content Include="Content\_export\_template\xl\styles.xml" />
+    <Content Include="Content\_export\_template\xl\theme\theme1.xml" />
+    <Content Include="Content\_export\_template\xl\workbook.xml" />
+    <Content Include="Content\_export\_template\xl\worksheets\sheet1.xml" />
+    <Content Include="Content\_export\_template\[Content_Types].xml" />
+    <Content Include="favicon.ico" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\applet.fixedhead.js" />
+    <Content Include="Scripts\applet.log.js" />
+    <Content Include="Scripts\applet.toolbox.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\adapters\mootools-adapter.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\adapters\mootools-adapter.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\adapters\prototype-adapter.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\adapters\prototype-adapter.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\highcharts-more.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\highcharts.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\highcharts.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\modules\canvas-tools.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\modules\data.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\modules\data.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\modules\exporting.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\modules\exporting.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\modules\funnel.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\modules\funnel.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\themes\dark-blue.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\themes\dark-green.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\themes\gray.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\themes\grid.js" />
+    <Content Include="Scripts\Highcharts-3.0.0\js\themes\skies.js" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\css\redmond\jquery-ui-1.8.23.custom.css" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\index.html" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\js\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom\js\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="Scripts\jquery.sortElements.js" />
+    <Content Include="Scripts\jquery.tablesorter.js" />
+    <Content Include="Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Views\Service\Index.vbhtml" />
+    <Content Include="Views\Service\Sources.vbhtml" />
+    <Content Include="Views\Service\AggsList.vbhtml" />
+    <Content Include="Views\Shared\applet.log.js.vbhtml" />
+    <Content Include="Views\Bank\_dropDownEvent.js.vbhtml" />
+    <Content Include="Views\Bank\_exDataEvent.js.vbhtml" />
+    <Content Include="Views\Bank\_builder.js.vbhtml" />
+    <Content Include="Views\Admin\Cachemanager.vbhtml" />
+    <Content Include="Views\Admin\Index.vbhtml" />
+    <Content Include="Views\Admin\Users.vbhtml" />
+    <Content Include="Views\Admin\Roles.vbhtml" />
+    <Content Include="Views\Admin\CreateRole.vbhtml" />
+    <Content Include="Views\Admin\DeleteRole.vbhtml" />
+    <Content Include="Views\Admin\DeleteUser.vbhtml" />
+    <Content Include="Views\Admin\EditUser.vbhtml" />
+    <Content Include="Views\Admin\RolesUser.vbhtml" />
+    <Content Include="Views\Admin\DBConsole.vbhtml" />
+    <Content Include="Views\Admin\Terminal.vbhtml" />
+    <Content Include="Views\Bank\_helpEvent.js.vbhtml" />
+    <Content Include="NLog.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Comparison\Index.vbhtml" />
+    <Content Include="Views\Bank\List.vbhtml" />
+    <Content Include="Views\Comparison\Compare.vbhtml" />
+    <Content Include="Views\Account\ResetPassword.vbhtml" />
+    <Content Include="Views\Account\ResetPasswordSent.vbhtml" />
+    <Content Include="Views\Account\TryResetPassword.vbhtml" />
+    <Content Include="Views\Comparison\_bankslist.js.vbhtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Views\Account\ChangePassword.vbhtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.vbhtml" />
+    <Content Include="Views\Account\LogOn.vbhtml" />
+    <Content Include="Views\Account\Register.vbhtml" />
+    <Content Include="Views\Home\Index.vbhtml" />
+    <Content Include="Views\Shared\Error.vbhtml" />
+    <Content Include="Views\Shared\_LogOnPartial.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\export\" />
+    <Folder Include="Content\_cache\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BankBals-common\BankBals-common.csproj">
+      <Project>{A4E697BA-E4D7-41E8-97C6-33D03FB95B0B}</Project>
+      <Name>BankBals-common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpCompress\SharpCompress.csproj">
+      <Project>{10A689CF-76A2-4A4F-96E4-553C33398438}</Project>
+      <Name>SharpCompress</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1148</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://192.168.1.100</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://192.168.1.100</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

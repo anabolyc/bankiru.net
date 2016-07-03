@@ -1,0 +1,195 @@
+﻿table.table-board 
+{
+    border: 0px dashed gray;    
+    width: 100%;
+    max-width: 1200px;
+}
+
+table.table-board td
+{
+    border: 0px dashed gray;    
+}
+
+table.table-board tr:nth-child(odd)
+{
+    background-color: #fff;
+    border-right: 2px solid #fff;
+}
+
+table.table-board tr.tr-board-odd
+{
+    background-color: #fff;
+    border-right: 2px solid #fff;
+}
+
+table.table-board tr:nth-child(even)
+{
+    background-color: #f5f5f5;
+    border-right: 2px solid #f5f5f5;
+}
+
+table.table-board tr.tr-board-even
+{
+    background-color: #f5f5f5;
+    border-right: 2px solid #f5f5f5;
+}
+
+
+table.table-board tr:hover
+{
+    background-color: #eee;
+    border-right: 2px solid #F55;
+}
+
+table.table-board-postmsg 
+{
+    max-width: 1200px;
+    border: 0px solid gray;
+}
+
+table.table-board-postmsg td
+{
+    border: 0px solid gray;
+}
+
+table.table-board-postmsg input
+{
+    border: 1px solid black;
+    width: 800px;
+}
+
+table.table-board-postmsg textarea
+{
+    border: 1px solid black;
+    width: 800px;
+    height: 100px;
+}
+
+span.span-user 
+{
+    color: Green;    
+}
+
+span.span-user-me
+{
+    color: blue;    
+}
+
+span.span-sentby 
+{
+    color: #aaa;
+    font-size: 85%;
+}
+
+h4.h-msg-title 
+{
+/*    background-color: #fbb;    */
+}
+
+span.span-msg-text 
+{
+ /*   background-color: #fbb;    */
+    display: block;
+}
+
+div.div-msg-offset 
+{
+    padding-left: 25px;
+}
+
+a.a-admin 
+{
+    color: Red;    
+}
+
+a.a-admin:hover
+{
+    color: White;    
+    background-color: Red;
+}
+
+div.div-collapsed 
+{   
+    display: none;
+}
+
+span.span-show-topic 
+{
+    border: 1px solid gray;
+    cursor: pointer;
+    font-size: 75%;
+}
+
+span.span-msg-removed 
+{
+    color: #ccc;    
+    font-style: italic;
+}
+
+span.span-msg-removed a
+{
+    color: #ccc;    
+}
+
+a:link
+{
+    text-decoration: none;    
+}
+
+a:hover
+{
+    text-decoration: underline;    
+}
+
+/*
+============   C H A T   ===========*/
+
+span.span-chatuser 
+{
+    color: Green;       
+}
+
+span.span-chatuser-me
+{
+    color: blue;       
+}
+
+span.span-chattime 
+{
+    color: #999;       
+    font-size: smaller;
+}
+
+span.span-chatmsg 
+{
+    color: #000;       
+}
+
+div.div-chatwindow 
+{
+    border: 0px dashed red;
+    height: 400px;
+    overflow: auto;
+}
+
+input#input-msg 
+{
+    width: 600px;    
+}
+
+input#input-submit 
+{
+    line-height: 1em;
+}
+
+span.span-sound-switch 
+{
+    color: Blue;    
+    cursor: pointer;
+}
+
+span.span-sound-switch:hover
+{
+    color: White;
+    background-color: Blue;    
+}

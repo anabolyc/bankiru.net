@@ -1,0 +1,17 @@
+﻿div#title h1
+{
+    background-image: url("/Content/logo.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+div#title span 
+{
+    display: none;    
+}
+

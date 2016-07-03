@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<connections xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><connection id="1" name="Connection" type="4" refreshedVersion="4" background="1" refreshOnLoad="1" saveData="1"><webPr sourceData="1" parsePre="1" consecutive="1" xl2000="1" url="http://localhost:1187/Bank/GetExcelWebService?BankID=1000&amp;ViewID=1"/></connection></connections>

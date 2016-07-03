@@ -1,0 +1,30 @@
+upload_file.vbs
+---------------
+2014/03/13 Малышенко А.Б.
+Скрипт предназначен для загрузки данных по банковским балансам с ЦБ
+
+
+Использование
+-------------
+1. Загрузить один файл
+	upload_file.vbs <filename>
+	<filename> - это архив, скачанный с ЦБ, например c:\_temp\101-20140201.rar
+
+2. Загрузить все файлы из папки C:\_temp\
+	run.bat
+
+	
+Зависимости
+-----------
+1. Использует Microsoft.ACE.OLEDB.12.0 driver (Microsoft Access Database Engine 2010 Redistributable)
+	Источник: http://www.microsoft.com/en-us/download/details.aspx?id=13255
+
+2. Использует библиотеку ADODB.DataTransfer
+	.\bin\ADODB.DataTransfer.dll
+	.\src\DataTransfer.cs
+	
+	Установка:
+	Скопировать dll в %systemroot%\system32
+	Прописать %systemroot%\Microsoft.NET\Framework\v2.0.50727\regarm.exe ADODB.DataTransfer.dll /codebase
+
+	

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BankBals">
+  <DataContextMoniker Name="/BankBalsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fab40112-2a49-4c76-96ce-9789120646b7" absoluteBounds="1, 0.75, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/BankBalsDataContext/A_AGG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8675355-53a9-4911-9798-97d65ddeac51" absoluteBounds="1.0150000000000001, 1.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a33471eb-e9b1-44ce-8376-3700dea36642" absoluteBounds="3.875, 0.75, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/BankBalsDataContext/W_AGG_COMP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20a4eb4c-e7ea-4133-a727-2953cd18ee96" absoluteBounds="3.8899999999999997, 1.21, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 1.46242390950521); (3.875 : 1.46242390950521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BankBalsDataContext/A_AGG/A_AGG_W_AGG_COMP" />
+      <nodes>
+        <classShapeMoniker Id="fab40112-2a49-4c76-96ce-9789120646b7" />
+        <classShapeMoniker Id="a33471eb-e9b1-44ce-8376-3700dea36642" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="81d71bdf-90e6-4ac1-8491-c3964eea33a0" absoluteBounds="6.625, 0.75, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/BankBalsDataContext/A_BANK" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db7490c6-3ae6-42d6-b319-895b0fb60caa" absoluteBounds="6.64, 1.21, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.625 : 1.46242390950521); (5.875 : 1.46242390950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BankBalsDataContext/A_BANK/A_BANK_W_AGG_COMP" />
+      <nodes>
+        <classShapeMoniker Id="81d71bdf-90e6-4ac1-8491-c3964eea33a0" />
+        <classShapeMoniker Id="a33471eb-e9b1-44ce-8376-3700dea36642" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3b4c444b-69ef-461d-b3ab-b9dd15332a86" absoluteBounds="2, 3.625, 2, 2.24658447265625">
+      <DataClassMoniker Name="/BankBalsDataContext/A_DATE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23e9a5b4-7f7e-4e99-bcda-2d3fcba4d0eb" absoluteBounds="2.015, 4.085, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

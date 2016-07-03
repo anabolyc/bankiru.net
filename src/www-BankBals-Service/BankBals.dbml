@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BankBals" Class="BankBalsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.2.200.54;Initial Catalog=BankBals;Persist Security Info=True;User ID=webdeveloper" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BankBalsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.A_AGGS" Member="A_AGGs">
+    <Type Name="A_AGG">
+      <Column Name="AggID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="FullNameRUS" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="FullNameENG" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IsHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="A_AGG_W_AGG_COMP" Member="W_AGG_COMPs" ThisKey="AggID" OtherKey="AggID" Type="W_AGG_COMP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.W_AGG_COMP" Member="W_AGG_COMPs">
+    <Type Name="W_AGG_COMP">
+      <Column Name="AggID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BankID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="F101IsWithTO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F134" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="A_AGG_W_AGG_COMP" Member="A_AGG" ThisKey="AggID" OtherKey="AggID" Type="A_AGG" IsForeignKey="true" />
+      <Association Name="A_BANK_W_AGG_COMP" Member="A_BANK" ThisKey="BankID" OtherKey="BankID" Type="A_BANK" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_BANKS" Member="A_BANKs">
+    <Type Name="A_BANK">
+      <Column Name="BankID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullNameRUS" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullNameENG" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BankTTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsHaveData" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IssuerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="A_BANK_W_AGG_COMP" Member="W_AGG_COMPs" ThisKey="BankID" OtherKey="BankID" Type="W_AGG_COMP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.A_DATE" Member="A_DATEs">
+    <Type Name="A_DATE">
+      <Column Name="DateID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IsQuartal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F101" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F102" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F123" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F134" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="F135" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

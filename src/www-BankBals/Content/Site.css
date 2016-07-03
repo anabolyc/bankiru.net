@@ -1,0 +1,1200 @@
+﻿body, html {
+  height: 100%;
+}
+
+/* --------------------------------------------------------
+   ----   M A I N   T E M P L A T E   ---------------------   */
+
+@font-face {
+    font-family: 'UbuntuMono';
+    src: url('fonts/ubuntu/UbuntuMono-R-webfont.eot');
+    src: url('fonts/ubuntu/UbuntuMono-R-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ubuntu/UbuntuMono-R-webfont.woff') format('woff'),
+         url('fonts/ubuntu/UbuntuMono-R-webfont.ttf') format('truetype'),
+         url('fonts/ubuntu/UbuntuMono-R-webfont.svg#UbuntuMonoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #696969;
+    font-size: small;
+}
+
+a:link {
+    color: #034af3;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #505abc;
+}
+
+a:hover {
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active {
+    color: #12eb87;
+}f
+
+p, ul {
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+img 
+{
+    border-width: 0px;    
+}
+
+img.img-out 
+{
+    margin: -2px 3px;    
+}
+
+
+header,
+footer,
+nav,
+section {
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #666;
+    clear: both; 
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    padding: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    margin: 5px;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page {
+    margin: 0px 20px;
+}
+
+header, #header {
+    position: relative;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+div#title {
+    display: block;
+    float: left;
+    text-align: left;
+    background-color: #5c87b2;
+}
+
+div#title a {
+    text-decoration: none;
+}
+
+header h1, #header h1, h1.h1-logo 
+{
+    font-weight: 400;
+    padding: 0px 10px;
+    margin: 0;
+    background-color: #5c87b2;
+    color: white;
+    border: none;
+    line-height: 1.6em;
+    font-size: 32px !important;
+    position: absolute;
+}
+
+#main 
+{
+    padding-top: 20px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+#footer 
+{
+    font-size: 85%;
+    clear: both;
+    border-top: 1px #5C87B2 solid;
+}
+
+footer, 
+#footer {
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+}
+
+span.span-bread 
+{
+    font-size: 90%;
+    padding-bottom: 10px;
+}
+
+div.div-bread 
+{
+    font-size: 90%;
+    margin-bottom: 15px;
+}
+
+span.span-identity 
+{
+    color: blue;
+    font-weight: 800;    
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul#menu {
+    border-bottom: 1px #5C87B2 solid;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    text-align: left;
+    display: block;
+}
+
+ul#menu img {
+    width: 16px;
+    height: 16px;
+    padding-right: 4px;
+    top: 3px;
+    position: relative;
+}
+
+ul#menu li {
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li#greeting {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a {
+    padding: 5px 20px;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #e8eef4;
+    color: #034af3;
+    border: 1px solid #e8eef4;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    background-color: #fff;
+    text-decoration: none;
+    border: 1px solid #ccc;
+}
+
+ul#menu li a:active {
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+ul#menu li.selected a {
+    background-color: #fff;
+    color: #555;
+    border-bottom: 1px solid #5C87B2;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+span.span-terminal 
+{
+    font-family: UbuntuMono, monospace;
+    color: #090 !important;
+    font-size: 95%;
+}
+
+textarea, 
+input[type="submit"] 
+{
+    border: 1px solid black;
+    padding: 2px;
+    cursor: pointer;
+}
+
+input[type="text"], 
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+}
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+input[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+input.input-bank-c 
+{
+    font-family: Consolas, 'Ubuntu Mono', UbuntuMono, "Courier New", monospace;
+    font-size: 1em;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table {
+    border: solid 1px #e8eef4;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 6px;
+    border: solid 1px #e8eef4;
+    white-space: nowrap; 
+}
+
+table th {
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear {
+    clear: both;
+}
+
+.error {
+    color: Red;
+}
+
+nav, 
+#menucontainer {
+    margin-top: 40px;
+}
+
+span.span-b 
+{
+    color: #FFF;
+    background-color: #5C87B2;
+    border-color: #5C87B2;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+span.span-dot 
+{
+    font-size: 50%;    
+}
+
+#logindisplay {
+    font-size: 0.8em;
+    display: block;
+    text-align: right;
+    margin: 10px;
+    color: #999;
+}
+
+#logindisplay a:link {
+    color: #555;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited {
+    color: #555;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+img#img-logon 
+{
+    margin-bottom: -2px;    
+    margin-right: 2px;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, 
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.display-field, 
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+.text-box {
+    width: 30em;
+}
+
+.text-box.multi-line {
+    height: 6.5em;
+}
+
+.tri-state {
+    width: 6em;
+}
+
+.error 
+{
+    color: Red;
+}
+    
+/* my styles 
+----------------------------------------------------------*/
+ul.ul-list 
+{
+    list-style: none;
+}
+
+ul.ul-contents
+{
+    list-style: none;
+    background-color: #def;
+}
+
+ul.ul-contents a
+{
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+a.a-to-contents 
+{
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    margin: 0px 20px ;
+    font-size: 75%;
+}
+
+div.div-datatable-cont {
+    padding: 0;
+    /*margin-top: 20px;*/
+    min-height: 300px;
+}
+
+table.table-clear 
+{
+    border-width: 0px;    
+}
+
+table.table-clear td
+{
+    border-width: 0px;    
+}
+
+table.texttable 
+{
+    white-space: nowrap;
+    width: 100% ;
+}
+
+table.table-datatable
+{
+    border: 1px solid #ccc;
+    font-size: 8pt; 
+}
+
+table.table-datatable td, th 
+{
+    white-space: nowrap;
+    padding: 2px; 
+    font-family: Consolas, 'Ubuntu Mono', UbuntuMono, "Courier New", monospace;
+    font-size: 1em;
+}
+
+table.table-datatable th {
+    text-align: center;
+    padding: 4px;
+    border: 1px solid #ccc;
+}
+
+table.table-datatable tr 
+{
+    height: 1.3em;    
+}
+
+table.table-clone {
+    box-shadow: 0 4px 10px -5px #5C87B2;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+table.table-clone th {
+    white-space: nowrap;
+}
+
+table.table-comparison 
+{
+    text-align: right;    
+}
+
+div#div-col
+{
+    float: left;
+    text-align: left;
+    max-width: 50%;
+    min-width: 25%;
+    overflow-y: none;
+    overflow-x: scroll;
+  
+}
+
+div#div-col table.table-datatable
+{
+    width: 100%;
+}
+
+div#div-content table
+{
+    text-align: right;
+}
+
+div#div-body
+{
+    overflow-y: none;
+    overflow-x: scroll;
+    text-align: right;
+}
+
+div.div-compare
+{
+    overflow-y: none;
+    overflow-x: none;
+    text-align: right;
+}
+
+
+th.th-selectors 
+{
+    text-align: left !important;     
+    padding-left: 105px !important;
+}
+
+span.span-switch
+{
+    margin: 2px;
+    padding: 0px 4px 0px 3px;
+    font-weight: 800;
+    font-size: 8pt;
+    border: 1px solid #5CA2DD;
+    color: #5CA2DD;
+    cursor: pointer;
+    background-color: #DDD;
+}
+
+span.span-switch-selected
+{
+    border: 1px solid black;
+    color: black;
+    cursor: auto;
+    background-color: #EEE;
+}
+
+span.pseudolink {
+    cursor: pointer;
+    border-bottom: 1px dashed;
+    color: #034af3;
+    padding: 2px; 
+}
+
+span.act {
+    color: #FFF;
+    border: 0px;
+    background-color: #333;
+}
+
+/*  for light boxes with lists and searches
+=========   */
+div#div-fade
+{
+    background: #000; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 10;
+}
+
+div#div-frame					
+{
+    border: 2px solid #5c87b2; 
+    margin:5px; 
+    padding: 20px; 
+    width: 80%; 
+    height: 80%; 
+    top: 10%; 
+    left: 10%; 
+    background: #EEF;
+    position: fixed; 
+    z-index: 20;
+    overflow: auto;
+    font-size: 90%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+img#img-bankclose
+{
+    cursor: pointer;
+    color: #5CA2DD;
+    border: 1px solid #CCC;
+    padding: 1px;
+}
+
+img#img-bankclose:hover
+{
+    border: 1px solid gray;
+}
+
+div.div-bank 
+{
+    float: left;   
+    width: 30%;
+}
+
+div.div-bank3
+{
+    float: left;   
+    width: 30%;
+}
+
+div.div-bank4
+{
+    float: left;   
+    width: 24%;
+}
+
+div.div-hr
+{
+    width: 30%;
+}
+
+input#srch, input#bank-srch, input#view-srch, input#date-srch
+{   
+    background-image: url("srch.png"); 
+    background-repeat: no-repeat; 
+    background-position: right; 
+    font-size: small;    
+}
+
+input#bank-srch
+{
+    width: 150px;
+}
+
+input#view-srch
+{
+    width: 300px;
+}
+
+input#date-srch
+{
+    width: 100px;
+}
+/* =================  */
+span.loading
+{
+    background-image: url("loading.gif") !important;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+body.body-loading 
+{
+    background-image: url("loading.gif") !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: black;
+    
+}
+
+span.span-diff
+{
+    color: Blue;
+    width: 50px;
+}
+
+span.span-perc
+{
+    color: black;
+    width: 50px;
+}
+
+span.span-green 
+{
+    color: Green;
+}
+
+span.span-red 
+{
+    color: Red;
+}
+
+span.span-lightGrey
+{
+    color: #AAA;
+    /*font-size: 7pt;*/
+}
+
+td.td-leftaligned 
+{
+    text-align: left;
+}
+
+tr.tr-header-2
+{
+    color: #555;
+    font-weight: 800;
+    background-color: #A5D2FF;
+    font-size: 110%;
+}
+
+tr.tr-header, tr.tr-header-1  
+{
+    color: #555;
+    font-weight: 800;
+    background-color: #def;
+}
+
+td.td-img-bars 
+{
+    padding: 1px 2px 0px 2px !important;    
+}
+
+td.td-img-bars > img
+{
+    height: 13px;
+}
+
+/* DROPDOWN styles 
+ ------------------------------------------------*/
+span.span-dropdown 
+{
+    cursor: pointer;
+    color: #5CA2DD;
+    border: 1px solid white;
+    padding: 1px;
+}
+
+span.span-row-dropdown 
+{
+    cursor: pointer;
+    color: #5CA2DD;
+    border-bottom: 1px dotted #5CA2DD;
+}
+
+span.span-row-dropdown:hover
+{
+    color: #1d60ff;
+    border-bottom: 1px dotted #1d60ff;
+}
+
+span.span-dropdown:hover
+{
+    border: 1px solid gray;
+}
+
+span.span-nodropdown 
+{
+    border: 1px solid white;
+    padding: 1px;
+}
+
+tr.tr-dropdown td 
+{
+    background-color: #DEE;
+}
+
+tr.tr-dropdown td 
+{
+    background-color: #DEE;
+}
+
+tr.tr-dropdown span.span-nodropdown
+{
+    border-color: #DEE;
+}
+
+tr.tr-dropdown span.span-dropdown
+{
+    border-color: #DEE;
+}
+
+tr.tr-dropdown span.span-dropdown:hover
+{
+    border: 1px solid gray;
+}
+
+tr.tr-collapsed 
+{
+    display: none;
+    background-color: #DEE;
+}
+/* MOREDATA styles 
+ ------------------------------------------------*/
+span.span-more 
+{
+    margin: 2px;
+    padding: 0px 3px;
+    border: 1px solid #5CA2DD;
+    color: #5CA2DD;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+span.span-more:hover 
+{
+    border: 1px solid #1d60ff;
+}
+
+span.span-plus
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("plus.gif");
+}
+
+span.span-minus
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("minus.gif");
+}
+
+tr.tr-moredata-0 td
+{
+    background-color: #D5D5E5;
+}
+
+tr.tr-moredata-1 td
+{
+    background-color: #D5D5E5;
+}
+
+tr.tr-moredata-2 td
+{
+    background-color: #E1E1F2;
+}
+
+tr.tr-moredata-3 td
+{
+    background-color: #EDEDFF;
+}
+
+tr.tr-moredata-4 td
+{
+    background-color: #EDEDFF;
+}
+
+div#div-col tr.tr-moredata td 
+{
+    padding-left: 109px; 
+}
+
+/* ui custom styles */
+span.span-ui-dropdown
+{
+    padding-right: 35px;
+}
+
+/*  --- MIAN PAGE  
+                    -------*/
+
+div.div-block
+{
+    float: left;
+    max-width: 900px;
+    border: 0px dashed blue;
+    padding: 5px;
+}
+
+div.div-onebank 
+{
+    float: left;
+    width: 180px;
+    height: 30px;
+    border: 1px solid #DDD;    
+    vertical-align: middle;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+div.div-onebank:hover
+{
+    border: 1px solid #AAA;    
+}
+
+div.div-onebank  img
+{
+    width: 30px;
+    height: 30px;
+    border: 0px dashed green;
+    float: left;
+}
+
+div.div-onebank  span 
+{
+    border: 0px dashed red;
+    vertical-align: middle;
+    display: block;
+    padding: 5px 35px;
+}
+
+
+div.div-oneview
+{
+    float: left;
+    width: 380px;
+    height: 30px;
+    border: 1px solid #DDD;    
+    vertical-align: middle;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+div.div-oneview:hover
+{
+    border: 1px solid #AAA;    
+}
+
+div.div-oneview  img
+{
+    width: 40px;
+    height: 30px;
+    border: 0px dashed green;
+    float: left;
+}
+
+div.div-oneview  span 
+{
+    border: 0px dashed red;
+    vertical-align: middle;
+    display: block;
+    padding: 5px 5px 5px 45px;
+}
+
+div.div-toplinks 
+{
+    display: block;     
+    border: 0px dashed red;
+    text-align: left;
+    margin: 10px 0px;
+    font-size: 75%;
+}
+
+a.a-save 
+{
+    background-image: url("excel.gif");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px ;
+    margin-right: 20px ;
+}
+
+/* 
+/Service/Sources styles
+-----------------------------------*/
+
+td.td-yellow 
+{
+    background-color: #FFF4A8;    
+}
+
+td.td-yellow-darker
+{
+    background-color: #FFE347;    
+}
+
+td.td-blue
+{
+    background-color: #C1D1FF;    
+}
+
+td.td-blue-darker
+{
+    background-color: #7FA1FF;    
+}
+
+table.table-sources
+{
+    font-size: 75%;
+    margin-top: 20px;   
+}
+
+table.table-sources th
+{
+    font-family: "Arial Narrow";
+    font-size: 8px;
+}
+
+table.table-sources-legend
+{
+    margin-top: 20px;   
+}
+
+table.table-sources-legend td
+{
+    padding: 2px 6px;   
+}
+
+table.table-aggsmembers 
+{
+    width: 50%;
+    min-width: 300px;   
+    max-width: 700px;
+    margin-top: 20px;      
+}
+
+div#div-log {
+    text-align: left;
+    padding: 5px;
+    font-family: UbuntuMono, monospace;
+    width: 300px;
+    border: 1px dashed lime;
+    position: fixed;
+    top: 50px;
+    left: 900px;
+    margin: 5px;
+    color: lime;
+    font-size: 12px;
+    background-color: Black;
+}
+
+/* --------------------------------------------------------
+   ----   C H A R T S   -----------------------------------   */
+div.div-chart 
+{
+    border: 0px dotted #d00;
+    height: 300px;
+    width: 100%;
+    box-shadow: 0 2px 5px 1px #5C87B2;
+}
+
+div.div-chart0
+{
+    border: 0px dotted #d0d;
+    height: 300px;
+}
+
+span.span-hc-tooltip {
+    font-family: Consolas, 'Ubuntu Mono', UbuntuMono, "Courier New", monospace;
+    font-size: 90%;
+    line-height: 1.5em;
+}
+
+img.img-chart
+{
+    margin: -2px 0px;
+    cursor: pointer;
+}
+
+img.img-chart.active
+{
+    width: 20px;
+    height: 20px;
+    background-image: url("close.png")
+}
+
+div.div-highchart-bubbles 
+{
+    width: 800px;
+    height: 600px;
+    border: 0px dotted red;
+}
+
+/* --------------------------------------------------------
+   ----   T A B S    --------------------------------------   */
+   
+ul.ul-views 
+{
+    padding: 0;
+    margin: 10px 0px 10px 0px;
+    position: relative;
+    display: block;
+    font-size: 90%;
+}
+
+ul.ul-views li {
+    display: inline;
+    list-style: none;
+}
+
+ul.ul-views li a {
+    padding: 3px;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #e8eef4;
+    color: #034af3;
+    border: 1px solid #e8eef4;
+}
+
+ul.ul-views li a:hover {
+    background-color: #fff;
+    text-decoration: none;
+    border: 1px solid #ccc;
+}
+
+ul.ul-views li a:active {
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+ul.ul-views li.selected a {
+    background-color: #fff;
+    color: #555;
+    border-bottom: 1px solid #5C87B2;
+}
+
+/* -- ONE FRAME PAGE -- LIGHTBOX
+---------------------------------------*/
+
+div#div-frame-inner iframe
+{
+    border: 0px dashed red;
+    width : 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div#div-frame-inner 
+{
+    width : 100%;
+    height: 95%;
+}
+
+div.div-frame 
+{
+    font-size: 85%;   
+    padding: 10px;
+}
+
+div.div-frame ul
+{
+    list-style: none;
+}
+
+/* --------------------------------------------------------
+   ----   H E L P    --------------------------------------   */
+
+
+div.div-frame li.li-pseudolink
+{
+    cursor: pointer;
+    padding: 2px; 
+}
+
+div.div-frame li.li-header
+{
+    padding: 2px; 
+    font-weight: 800;
+}
+
+div.div-frame li.li-pseudolink > span
+{
+    border-bottom: 1px dotted;
+    color: #034af3;
+}
+
+img.img-help
+{
+    margin: -2px 0px -2px 3px;
+    cursor: pointer;
+}

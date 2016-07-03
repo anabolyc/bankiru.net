@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="www.BankBals.Service.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    
+    
+    <!--[if lt IE 8]>
+    <link href="@Url.Content("/BankBals/Content/ie6-7.css")" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="/BankBals/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/BankBals/Content/nonproduction.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+    <link href="@Url.Content("/BankBals/Content/nonproduction-ie.css")" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div id='title'>
+                    <h1 class='h1-logo'> <a href="/">Home</a> &gt; 
+                    <a href='/BankBals/'>
+                    Bank Balances</a></h1>
+                    </div>
+            <div id="logindisplay">&nbsp;</div>
+            <nav>
+                <ul id="menu">
+                    <li id="li-tab1"><a href="/BankBals/"><img src="/BankBals/Content/tabs/home.png" alt="Home" />Главная</a></li>
+                    <li id="li-tab2"><a href="/BankBals/Bank/List/"><img src="/BankBals/Content/tabs/bank.png" alt="Banks" />Банки</a></li>
+                    <li id="li-tab3"><a href="/BankBals/View/List/"><img src="/BankBals/Content/tabs/rank.png" alt="Rankings" />Рэнкинги</a></li>
+                    <li id="li-tab5"><a href="/BankBals/Comparison/"><img src="/BankBals/Content/tabs/compare.png" alt="Comparison" />Сравнение</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <footer>
+            <div  id="footer">
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

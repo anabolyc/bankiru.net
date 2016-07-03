@@ -1,0 +1,13 @@
+﻿@font-face {
+	font-family: SegoeLight;
+	src: url('segoe-ui-light.ttf');
+}
+
+header h1, #header h1, h1.h1-logo {
+    font-family: SegoeLight;
+}
+
+h1 > a:link, h1 > a:visited, h1 > a:hover, h1 > a:active {
+    color: white;
+    text-decoration: none;
+}
